@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="45sp"
+        android:text="@string/title"
+        android:gravity="center_horizontal"/>
+    <Button 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="45sp"
+        android:text="@string/about"/>
+    <Button 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="45sp"
+        android:text="@string/continueBut"/>
+    <Button 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="45sp"
+        android:text="@string/newGame"/>
+    <Button 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="45sp"
+        android:text="@string/exit"
+        android:onClick="onClick"/>
+</LinearLayout>
