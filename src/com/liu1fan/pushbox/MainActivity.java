@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends Activity {
@@ -19,7 +21,19 @@ public class MainActivity extends Activity {
     }
     
     public void onClick(View view){
-    	AlertDialog.Builder dll = new AlertDialog.Builder(this);
+    	
+		
+		
+		switch (view.getId()) {
+		case R.id.exit:
+			isFinish();
+			break;
+
+		}
+    }
+
+	public void isFinish(){
+		AlertDialog.Builder dll = new AlertDialog.Builder(this);
     	dll.setTitle("Warnning!");
    
     	dll.setMessage("Do you want exit?");
@@ -40,17 +54,31 @@ public class MainActivity extends Activity {
 		});
 		dll.create();
 		dll.show();
-    }
-
-		
+	}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-    	MenuInflater infiMenuInflater =new MenuInflater(this);
-        getMenuInflater().inflate(R.menu.activity_main, menu);
+    	MenuInflater inflater =new MenuInflater(this);
+        inflater.inflate(R.menu.activity_main, menu);
         
-        return true;
+        return super.onCreateOptionsMenu(menu);
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	// TODO Auto-generated method stub
+    	switch (item.getItemId()) {
+		case R.id.music:
+			Intent intent1 = new Intent(MainActivity.this,MusicPlayer.class);
+			startActivity(intent1);
+			break;
+		case R.id.help:
+			Intent intent2 = new Intent(MainActivity.this,Helper.class);
+			startActivity(intent2);
+			break;
+		}
+    	return super.onOptionsItemSelected(item);
     }
     
 }

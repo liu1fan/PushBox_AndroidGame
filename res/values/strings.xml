@@ -10,6 +10,5 @@
     <string name="continueBut">Continue</string>
     <string name="newGame">New Game</string>
     <string name="exit">Exit</string>
-    <!-- <string name="dlltitle">Warnning</string> -->
-
+    <string name="helptitle">Game Help</string>
 </resources>
